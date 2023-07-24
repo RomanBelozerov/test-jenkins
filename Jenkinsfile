@@ -1,11 +1,16 @@
 pipeline {
-    stages {
-	stage {
-	    steps {
-		script {
-		    echo "Test jenkinsfile"
-		}
-	    }
+	
+	agent {
+		label "base"
 	}
-    }
+	
+	stages {
+		stage {
+			steps {
+				script {
+					echo "Test jenkinsfile"
+				}
+			}
+		}
+	}
 }
