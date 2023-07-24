@@ -9,6 +9,7 @@ pipeline {
 			steps {
 				script {
 					echo "Test jenkinsfile"
+					cd /qweasd
 				}
 			}
 		}
