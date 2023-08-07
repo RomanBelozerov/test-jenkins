@@ -11,6 +11,7 @@ pipeline {
 					echo "Test jenkinsfile"
 					sh "printenv"
 					sh "pwd"
+					sh "ls -a"
 				}
 			}
 		}
