@@ -10,12 +10,10 @@ pipeline {
 				script {
 					echo "Test jenkinsfile"
 					sh "ls -a"
-					sh "cp /var/lib/jenkins/workspace/Makefile.local Makefile.local"
-					sh "printenv"
+					sh "echo 'BUILD_DIR := /var/lib/jenkins/workspace/envoy-docker-build' >> Makefile.local"
 					sh "cat Makefile.local"
 					sh "pwd"
 					sh "ls -a"
-					sh "cat Makefile.local"
 				}
 			}
 		}
