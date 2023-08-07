@@ -9,8 +9,10 @@ pipeline {
 			steps {
 				script {
 					echo "Test jenkinsfile"
-					echo -e "BUILD_DIR := /var/lib/jenkins/workspace/envoy-docker-build\nLLVM_ROOT := /usr/lib/llvm-15\nWRAPPERS_DIR := /var/lib/jenkins/workspace/fakecc" > Makefile.local
-					sh "printenv"
+					echo "BUILD_DIR := /var/lib/jenkins/workspace/envoy-docker-build" >> Makefile.local
+                    			echo "LLVM_ROOT := /usr/lib/llvm-15" >> Makefile.local
+                    			echo "WRAPPERS_DIR := /var/lib/jenkins/workspace/fakecc" >> Makefile.localsh "printenv"
+					sh "cat Makefile.local"
 					sh "pwd"
 					sh "ls -a"
 				}
