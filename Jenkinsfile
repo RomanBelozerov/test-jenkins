@@ -9,7 +9,8 @@ pipeline {
 			steps {
 				script {
 					echo "Test jenkinsfile"
-					pwd
+					sh "printenv"
+					sh "pwd"
 				}
 			}
 		}
